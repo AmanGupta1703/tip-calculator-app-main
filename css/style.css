@@ -1,0 +1,272 @@
+/* 
+    GOOGLE FONT
+*/
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  /* COLOR PALETTE */
+
+  /* CYAN - DARK */
+  --strong-cyan: hsl(172, 67%, 45%);
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+
+  /* CYAN _ LIGHT */
+  --grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --very-light-grayish-cyan: hsl(189, 41%, 97%);
+
+  /* WHITE */
+  --white: hsl(0, 0%, 100%);
+
+  --ff-primary: "Space Mono", monospace;
+
+  /* FONT WEIGHT */
+  --fw-700: 700;
+
+  /* FONT SIZE */
+  --fs-24: 1.5rem;
+
+  /* MEDIA QUERY */
+  --mobile: 375px;
+  --desktop: 1440px;
+}
+
+body {
+  font-family: var(--ff-primary);
+  background: var(--light-grayish-cyan);
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  transition: 500ms all ease;
+}
+
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/***** ELEMENT *****/
+
+input {
+    background: var(--very-light-grayish-cyan);
+    border: none;
+    display: block;
+    font-size: var(--fs-24);
+    outline: none;
+}
+
+/***** End ELEMENT *****/
+
+/***** HEADER *****/
+
+.header {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0 2rem;
+}
+
+.header--title {
+  color: var(--dark-grayish-cyan);
+  font-size: var(--fs-24);
+  letter-spacing: 0.5rem;
+}
+
+.header--title span {
+  display: block;
+}
+
+/***** End HEADER *****/
+
+/***** MAIN CONTENT *****/
+
+.tips-container--title,
+.input-group--title {
+    color: var(--dark-grayish-cyan);
+}
+
+.main-content {
+  background: var(--white);
+  border-radius: 1rem;
+  padding: 1.5em;
+  transform: scale(.8);
+  transition: all 500ms ease;
+}
+
+.main-content:hover {
+    transform: scale(1);
+}
+
+.input-group {
+    position: relative;
+}
+
+.input-group--title {
+    font-weight: 400;
+}
+
+.input-group--icon {
+    position: absolute;
+    top: 54%;
+    left: 5%;
+}
+
+.input-group--amount,
+.input-group--no-of-people {
+    color: var(--very-dark-cyan);
+    border-radius: .5rem;
+    font-family: inherit;
+    text-align: right;
+    padding: .2em .6em;
+    margin: 0.3em 0 0;
+}
+
+.tips-container {
+    margin: 2em 0;
+}
+
+.btn-container {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-gap: 1em;
+    margin: 0.3em 0 0;
+}
+
+.btn {
+    border: none;
+    border-radius: .5rem;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.tip-btn {
+    color: var(--white);
+    background: var(--very-dark-cyan);
+    font-size: 1.4rem;
+    padding: .5em;
+}
+
+.custom-btn {
+    color: var(--very-dark-cyan);
+    background-color: var(--very-light-grayish-cyan);
+    padding: .5em;
+}
+
+.custom-btn::placeholder {
+    color: var(--very-dark-cyan);
+}
+
+.btn:not(:last-child):is(:hover, :focus) {
+    color: var(--very-dark-cyan);
+    background-color: var(--strong-cyan);
+}
+
+.computed-amount-container {
+    color: var(--strong-cyan);
+    background: var(--very-dark-cyan);
+    border-radius: .8rem;
+    padding: 1.5em;
+    padding-top: 2em;
+    margin: 2em 0 0;
+}
+
+.computed-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.computed-box:last-of-type {
+    margin: 1em 0 0;
+}
+
+.computed-box--title {
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+}
+
+.computed-box--title span {
+    color: var(--very-light-grayish-cyan);
+    font-size: .6rem;
+    font-weight: 400;
+}
+
+.computed-box--amount, 
+.computed-box--tip {
+    font-size: 1.8rem;
+}
+
+.reset-btn {
+    text-transform: uppercase;
+    background: var(--strong-cyan);
+    font-size: 1.2rem;
+    width: 100%;
+    margin: 2em 0 0;
+    padding: .5em 0;
+}
+
+.reset-btn:is(:hover, :focus) {
+    background-color: var(--light-grayish-cyan);
+}
+
+/***** End MAIN CONTENT *****/
+
+
+/***** MEDIA MOBILE-S *****/
+
+@media (min-width: 320px) {
+    .input-group--amount,
+    .input-group--no-of-people  {
+        width: 100%;
+    }
+}
+
+/***** End MEDIA MOBILE-S *****/
+
+
+/***** MEDIA QUERY DESKTOP *****/
+
+@media (min-width: 1024px) {
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-content: center;
+        gap: 3em;
+    }
+
+    .computed-box {
+        margin: 2em 0 0;
+    }
+
+    .reset-btn {
+        display: block;
+        margin: 11em auto 0;
+    }
+}
+
+/***** End MEDIA QUERY DESKTOP *****/

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <header class="header">
+
+      <h1 class="header--title">SPLI<span>TTER</span></h1>
+
+    </header>
+
+    <main class="main-content">
+
+      <section class="main-section">
+
+        <article class="tip-calculator--box">
+
+          <div class="bill-input--box input-group">
+            <label for="bill-amount" class="input-group--title">Bill</label>
+            <img src="./images/icon-dollar.svg" class="input-group--icon">
+            <input type="number" class="input-group--amount" id="bill-amount" placeholder="142.55">
+          </div>
+
+          <div class="tips-container">
+
+            <h4 class="tips-container--title">Select Tip %</h4>
+
+            <div class="btn-container">
+              <button class="btn tip-btn" data-id="5">5%</button>
+              <button class="btn tip-btn" data-id="10">10%</button>
+              <button class="btn tip-btn" data-id="15">15%</button>
+              <button class="btn tip-btn" data-id="25">25%</button>
+              <button class="btn tip-btn" data-id="50">50%</button>
+              <input type="number" class="btn custom-btn" id="custom-btn" placeholder="Custom"></input>
+            </div>
+
+          </div>
+
+          <div class="input-group no-of-people-box">
+
+            <label for="no-of-people" class="input-group--title">Number of people</label>
+            <img src="./images/icon-person.svg" alt="" class="input-group--icon">
+            <input type="number" class="input-group--no-of-people" id="no-of-people" placeholder="5">
+
+          </div>
+
+        </article>
+
+        <article class="computed-amount-container">
+
+          <div class="computed-box">
+            <h3 class="computed-box--title">Tip Amount <span>/ person</span></h3>
+            <p class="computed-box--amount" id="computed-box--tip">$4.27</p>
+          </div>
+
+          <div class="computed-box">
+            <h3 class="computed-box--title">Total <span>/ person</span></h3>
+            <p class="computed-box--amount" id="computed-box--amount">$32.79</p>
+          </div>
+
+          <button class="btn reset-btn">Reset</button>
+
+        </article>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- javascript -->
+  <script  ipt src="./javascript/tip-calculator-v1.js"></script>
+
+</body>
+
+</html>
