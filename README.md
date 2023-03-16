@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/AmanGupta1703/tip-calculator-app-main)
+- Live Site URL: [Add live site URL here](https://tip-calculator-frontend-project-app.netlify.app/)
 
 ## My process
 
@@ -68,6 +68,6 @@ Users should be able to:
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
+- Website - [Tip Calculator App](https://tip-calculator-frontend-project-app.netlify.app/)
 - Frontend Mentor - [@AmanGupta1703](https://www.frontendmentor.io/profile/AmanGupta1703)
 - Twitter - [@hekunalgupta17](https://twitter.com/thekunalgupta17)
