@@ -8,6 +8,7 @@ class TipCalculator {
     this.computedBoxAmount = document.querySelector("#computed-box--amount");
     this.computedBoxTip = document.querySelector("#computed-box--tip");
     this.computedBoxAmount = document.querySelector("#computed-box--amount");
+    this.resetBtn = document.querySelector(".reset-btn");
   }
 
   calculateBill(billAmount, tip, noOfPeople) {
@@ -20,6 +21,13 @@ class TipCalculator {
     this.computedBoxTip.textContent = `$${tipPerPerson.toFixed(2)}`;
     this.computedBoxAmount.textContent = `$${amountPerPerson.toFixed(2)}`;
   }
+}
+
+function defaultSetting() {
+  (billAmount = 0), (tip = 0), (noOfPeople = 0);
+
+  tipCalculator.computedBoxTip.textContent = `$0.00`;
+  tipCalculator.computedBoxAmount.textContent = `$0.00`;
 }
 
 const tipCalculator = new TipCalculator();
@@ -45,5 +53,10 @@ tipCalculator.customBtn.addEventListener("input", function (e) {
 
 tipCalculator.noOfPeopleEl.addEventListener("input", function (e) {
   noOfPeople = e.target.value ? Number.parseInt(e.target.value) : 0;
-  tipCalculator.calculateBill(billAmount, tip, noOfPeople);
+  billAmount &&
+    tip &&
+    noOfPeople &&
+    tipCalculator.calculateBill(billAmount, tip, noOfPeople);
 });
+
+tipCalculator.resetBtn.addEventListener("click", defaultSetting);
