@@ -45,6 +45,9 @@ body {
   padding: 0;
   height: 100vh;
   transition: 500ms all ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -106,6 +109,7 @@ input {
   padding: 1.5em;
   transform: scale(.8);
   transition: all 500ms ease;
+  width: 68vw;
 }
 
 .main-content:hover {

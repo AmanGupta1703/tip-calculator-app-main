@@ -26,6 +26,10 @@ class TipCalculator {
 function defaultSetting() {
   (billAmount = 0), (tip = 0), (noOfPeople = 0);
 
+  tipCalculator.billAmountEl.value = "";
+  tipCalculator.noOfPeopleEl.value = "";
+  tipCalculator.customBtn.value = "";
+
   tipCalculator.computedBoxTip.textContent = `$0.00`;
   tipCalculator.computedBoxAmount.textContent = `$0.00`;
 }
@@ -38,7 +42,10 @@ let billAmount,
 
 // EVENT LISTINNERS
 tipCalculator.billAmountEl.addEventListener("input", function (e) {
-  billAmount = e.target.value ? Number.parseFloat(e.target.value) : 0;
+  const billAmountElValue = Number.parseFloat(e.target.value);
+  if (billAmountElValue > 0) {
+    billAmount = billAmountElValue;
+  }
 });
 
 tipCalculator.tipBtns.forEach((tipBtn) => {
@@ -48,11 +55,19 @@ tipCalculator.tipBtns.forEach((tipBtn) => {
 });
 
 tipCalculator.customBtn.addEventListener("input", function (e) {
-  tip = e.target.value ? Number.parseInt(e.target.value) : 0;
+  const tipElValue = Number.parseInt(e.target.value);
+  if (tipElValue > 0) {
+    tip = tipElValue;
+  }
 });
 
 tipCalculator.noOfPeopleEl.addEventListener("input", function (e) {
-  noOfPeople = e.target.value ? Number.parseInt(e.target.value) : 0;
+  const noOfPeopleElValue = Number.parseInt(e.target.value);
+
+  if (noOfPeopleElValue > 0) {
+    noOfPeople = noOfPeopleElValue;
+  }
+
   billAmount &&
     tip &&
     noOfPeople &&
